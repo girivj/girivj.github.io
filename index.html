@@ -4,13 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI Dev & ML Enthusiast Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
       <nav>
         <div class="logo">Portfolio</div>
-        <ul>
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav-list">
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#skills">Skills</a></li>
@@ -21,7 +32,7 @@
     
     <section class="hero">
       <div class="hero-content">
-        <h1 class="fade-in">AI Developer & ML Enthusiast</h1>
+        <h1>I am <span class="typing-text"></span><span class="cursor">&nbsp;</span></h1>
         <p class="fade-in delay">
           Exploring the frontier of AI & ML with passion.
         </p>
@@ -29,69 +40,86 @@
       </div>
     </section>
     
-    <section id="about" class="section slide-up">
+    <section id="about" class="section hidden">
       <h2>About Me</h2>
-      <p>
-        I’m Giri Shankar V J, an Electrical and Electronics Engineering graduate with a deep curiosity for intelligent systems and data-driven innovation. My academic foundation in EEE sparked my interest in cutting-edge technologies, and I've since been channeling that passion toward becoming an AI Engineer.</p><br>
-
+      <div class="about-content">
         <p>
-        I’m particularly drawn to the way machine learning and data science are transforming industries—from predictive analytics to intelligent automation. With a growing skill set in Python, data analysis, and machine learning frameworks, I’m focused on building solutions that are not only technically robust but also deeply impactful.
-      </p><br>
-      <p>
-Driven by curiosity, continuous learning, and a relentless problem-solving mindset, I’m eager to contribute to projects that harness the power of AI to make smarter decisions and shape a better future.
-      </p>
+          I’m Giri Shankar V J, an Electrical and Electronics Engineering graduate with a deep curiosity for intelligent systems and data-driven innovation. My academic foundation in EEE sparked my interest in cutting-edge technologies, and I've since been channeling that passion toward becoming an AI Engineer.
+        </p>
+        <p>
+          I’m particularly drawn to the way machine learning and data science are transforming industries—from predictive analytics to intelligent automation. With a growing skill set in Python, data analysis, and machine learning frameworks, I’m focused on building solutions that are not only technically robust but also deeply impactful.
+        </p>
+        <p>
+          Driven by curiosity, continuous learning, and a relentless problem-solving mindset, I’m eager to contribute to projects that harness the power of AI to make smarter decisions and shape a better future.
+        </p>
+      </div>
     </section>
     
-    <section id="projects" class="section slide-up">
+    <section id="projects" class="section hidden">
       <h2>Projects</h2>
       <div class="projects-container">
-        <div class="project">
-          <h3>AI model to classify fashion elements using Google Teachable Machines</h3>
-          <p>This AI model, built using Google Teachable Machines, classifies various fashion elements such as clothing types, patterns, and colors with high accuracy. It offers a user-friendly, no-code interface for rapid training and deployment on image datasets to support fashion-related insights and applications.</p>
+        <div class="project-card">
+          <div class="project-icon"><i class="fas fa-tshirt"></i></div>
+          <h3>Fashion Element Classification</h3>
+          <p>AI model built using Google Teachable Machines. Classifies clothing types, patterns, and colors with high accuracy. User-friendly interface for rapid training.</p>
+          <div class="project-tags">
+            <span>Teachable Machine</span>
+            <span>Classification</span>
+          </div>
         </div>
-        <div class="project">
-          <h3>AI model to predict employee attrition rate using DataRobot</h3>
-          <p>This AI model built with DataRobot predicts employee attrition using historical HR data and key performance indicators. It leverages advanced machine learning techniques to identify attrition trends and provide actionable insights for retention strategies.</p>
+        <div class="project-card">
+          <div class="project-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Attrition Prediction</h3>
+          <p>AI model built with DataRobot to predict employee attrition using historical HR data. Leverages ML techniques to identify trends and provide retention strategies.</p>
+           <div class="project-tags">
+            <span>DataRobot</span>
+            <span>Predictive Analytics</span>
+          </div>
         </div>
-        <div class="project">
-          <h3>Detect a hand,segment the hand and count the number of fingers being held up</h3>
-          <p>Use OpenCV (cv2) to detect and segment the hand from the image via contour extraction. Apply sklearn's pairwise distances to analyze fingertip positions and count extended fingers based on geometric relationships.</p>
+        <div class="project-card">
+          <div class="project-icon"><i class="fas fa-hand-paper"></i></div>
+          <h3>Hand Gesture Recognition</h3>
+          <p>Uses OpenCV to detect and segment hands via contour extraction. Counts fingers based on geometric relationships and pairwise distances.</p>
+           <div class="project-tags">
+            <span>OpenCV</span>
+            <span>Computer Vision</span>
+          </div>
         </div>
       </div>
     </section>
     
-    <section id="skills" class="section slide-up">
+    <section id="skills" class="section hidden">
       <h2>Skills</h2>
-      <ul class="skills-list">
-        <li>Python</li>
-        <li>TensorFlow</li>
-        <li>Java</li>
-        <li>Structured Query Language</li>
-        <li>Azure</li>
-        <li>Machine Learning</li>
-        <li>Deep Learning</li>
-        <li>Computer Vision</li>
-      </ul>
+      <div class="skills-container">
+        <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+        <span class="skill-tag"><i class="fas fa-brain"></i> TensorFlow</span>
+        <span class="skill-tag"><i class="fab fa-java"></i> Java</span>
+        <span class="skill-tag"><i class="fas fa-database"></i> SQL</span>
+        <span class="skill-tag"><i class="fab fa-microsoft"></i> Azure</span>
+        <span class="skill-tag"><i class="fas fa-cogs"></i> Machine Learning</span>
+        <span class="skill-tag"><i class="fas fa-network-wired"></i> Deep Learning</span>
+        <span class="skill-tag"><i class="fas fa-eye"></i> Computer Vision</span>
+      </div>
     </section>
     
-    <section id="contact" class="section slide-up">
+    <section id="contact" class="section hidden">
       <h2>Contact</h2>
-      <p>Connect with me via the following platforms:</p>
+      <p>Let's create something amazing together.</p>
       <div class="contact-icons">
-        <a href="mailto:girishankarvj@outlook.com" target="_blank" class="contact-icon">
-          <img src="./mail.png" alt="Outlook Logo" class="contact-logo" />
+        <a href="mailto:girishankarvj@outlook.com" target="_blank" class="contact-card" aria-label="Email">
+          <i class="fas fa-envelope"></i>
         </a>
-        <a href="https://www.linkedin.com/in/girivj" target="_blank" class="contact-icon">
-          <img src="./in.png" alt="LinkedIn Logo" class="contact-logo" />
+        <a href="https://www.linkedin.com/in/girivj" target="_blank" class="contact-card" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
         </a>
-        <a href="https://www.instagram.com/_shankzs" target="_blank" class="contact-icon">
-          <img src="./ig.png" alt="Instagram Logo" class="contact-logo" />
+        <a href="https://www.instagram.com/_shankzs" target="_blank" class="contact-card" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
         </a>
       </div>
     </section>
     
     <footer>
-      <p>&copy; 2025 Giri.Codes, Crafted with passion and elegance.</p>
+      <p>&copy; 2025 Giri.Codes | Crafted with <i class="fas fa-heart" style="color: #e25555;"></i> and Passion.</p>
     </footer>
     
     <script src="script.js"></script>
