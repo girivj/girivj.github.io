@@ -58,6 +58,15 @@ nav .logo {
   font-weight: 700;
   color: var(--primary-color);
   letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
 }
 
 nav ul {
